@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dwF-fK-Uz8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamRounded-Book.otf">
+            <string>GothamRounded-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Character List Controller-->
+        <scene sceneID="GSu-JK-ZWk">
+            <objects>
+                <viewController id="dwF-fK-Uz8" customClass="CharacterListController" customModule="MarvelCharacterList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HuS-t8-7fZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J4b-8U-66F">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CharacterCell" rowHeight="170" id="ngM-rR-3Yx" customClass="CharacterCell" customModule="MarvelCharacterList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="170"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ngM-rR-3Yx" id="3IH-Ho-Mvn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ff7-E9-yCh">
+                                                    <rect key="frame" x="20" y="10" width="374" height="150"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hourglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DVx-ma-01I">
+                                                            <rect key="frame" x="10" y="11" width="70" height="67.5"/>
+                                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="70" id="7Wy-wj-In5"/>
+                                                                <constraint firstAttribute="width" constant="70" id="wgC-yG-C0G"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <integer key="value" value="35"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUe-9o-pyV">
+                                                            <rect key="frame" x="10" y="90" width="354" height="40"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="moW-HT-5Sw"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <state key="normal" title="OPEN TO SEE MORE">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <integer key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="buttonTouched:" destination="ngM-rR-3Yx" eventType="touchUpInside" id="dBk-ID-ddc"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRw-vH-7tr">
+                                                            <rect key="frame" x="90" y="35" width="200" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="aqK-XU-6Ga"/>
+                                                                <constraint firstAttribute="height" constant="20" id="z6A-nM-s31"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="SRw-vH-7tr" firstAttribute="leading" secondItem="DVx-ma-01I" secondAttribute="trailing" constant="10" id="CjZ-AU-ldw"/>
+                                                        <constraint firstItem="KUe-9o-pyV" firstAttribute="top" secondItem="DVx-ma-01I" secondAttribute="bottom" constant="10" id="HOw-2V-UFX"/>
+                                                        <constraint firstItem="KUe-9o-pyV" firstAttribute="centerX" secondItem="ff7-E9-yCh" secondAttribute="centerX" id="JAs-1a-haQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KUe-9o-pyV" secondAttribute="trailing" constant="10" id="V8f-Xu-6sx"/>
+                                                        <constraint firstItem="SRw-vH-7tr" firstAttribute="centerY" secondItem="DVx-ma-01I" secondAttribute="centerY" id="YEw-6F-zWm"/>
+                                                        <constraint firstItem="DVx-ma-01I" firstAttribute="top" secondItem="ff7-E9-yCh" secondAttribute="top" constant="10" id="ZYo-Vc-B5g"/>
+                                                        <constraint firstItem="KUe-9o-pyV" firstAttribute="leading" secondItem="ff7-E9-yCh" secondAttribute="leading" constant="10" id="idw-dm-jlc"/>
+                                                        <constraint firstItem="DVx-ma-01I" firstAttribute="leading" secondItem="ff7-E9-yCh" secondAttribute="leading" constant="10" id="j8r-B4-gg7"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ff7-E9-yCh" secondAttribute="bottom" constant="10" id="6CZ-qi-D76"/>
+                                                <constraint firstItem="ff7-E9-yCh" firstAttribute="leading" secondItem="3IH-Ho-Mvn" secondAttribute="leading" constant="20" id="8tI-YX-Jsq"/>
+                                                <constraint firstItem="ff7-E9-yCh" firstAttribute="top" secondItem="3IH-Ho-Mvn" secondAttribute="top" constant="10" id="PyG-Bm-CLD"/>
+                                                <constraint firstAttribute="trailing" secondItem="ff7-E9-yCh" secondAttribute="trailing" constant="20" id="UCN-C9-t4u"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <outlet property="name" destination="SRw-vH-7tr" id="91P-fN-ThX"/>
+                                            <outlet property="profilePicture" destination="DVx-ma-01I" id="q93-zX-gwK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uOC-1i-hOc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J4b-8U-66F" firstAttribute="bottom" secondItem="GCC-FF-msY" secondAttribute="bottom" id="M2R-Zo-vw7"/>
+                            <constraint firstItem="uOC-1i-hOc" firstAttribute="centerX" secondItem="GCC-FF-msY" secondAttribute="centerX" id="aa4-A0-6dJ"/>
+                            <constraint firstItem="J4b-8U-66F" firstAttribute="trailing" secondItem="GCC-FF-msY" secondAttribute="trailing" id="e3B-sp-yPY"/>
+                            <constraint firstItem="J4b-8U-66F" firstAttribute="top" secondItem="uOC-1i-hOc" secondAttribute="bottom" id="fPq-dg-HHv"/>
+                            <constraint firstItem="uOC-1i-hOc" firstAttribute="top" secondItem="GCC-FF-msY" secondAttribute="top" id="hx1-gC-CpI"/>
+                            <constraint firstItem="GCC-FF-msY" firstAttribute="trailing" secondItem="uOC-1i-hOc" secondAttribute="trailing" id="mpv-Cg-kEM"/>
+                            <constraint firstItem="J4b-8U-66F" firstAttribute="leading" secondItem="GCC-FF-msY" secondAttribute="leading" id="pHX-xI-Zgt"/>
+                            <constraint firstItem="uOC-1i-hOc" firstAttribute="leading" secondItem="GCC-FF-msY" secondAttribute="leading" id="y2g-tp-9PC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GCC-FF-msY"/>
+                    </view>
+                    <connections>
+                        <outlet property="characterTableView" destination="J4b-8U-66F" id="yg2-hQ-UU3"/>
+                        <outlet property="searchBar" destination="uOC-1i-hOc" id="itA-HQ-6EA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xci-6i-dpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1.4492753623188408" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hourglass" catalog="system" width="54" height="64"/>
+    </resources>
+</document>
