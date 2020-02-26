@@ -1,0 +1,6 @@
+framework module Pods_MarvelCharacterList_MarvelCharacterListUITests {
+  umbrella header "Pods-MarvelCharacterList-MarvelCharacterListUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

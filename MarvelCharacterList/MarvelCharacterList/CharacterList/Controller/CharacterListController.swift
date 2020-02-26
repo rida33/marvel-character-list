@@ -25,13 +25,13 @@ class CharacterListController : UIViewController, UISearchBarDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        characters = [Character(name: "rida", bio: "rida est le plus grand des héros", imgUrl: ""),
-        Character(name: "pony", bio: "pony est le héros des transports", imgUrl: "")]
+        self.presenter?.getCharacters(search: "")
         self.characterTableView.reloadData()
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.presenter?.getCharacters(search: searchBar.prompt ?? "")
+        self.presenter?.getCharacters(search: searchBar.text ?? "")
+        self.searchBar.endEditing(true)
     }
 }
 
@@ -43,6 +43,7 @@ extension CharacterListController : CharacterListDelegate {
 
     func deleteCharacters() {
         characters = []
+        self.characterTableView.reloadData()
     }
 }
 
@@ -67,6 +68,12 @@ extension CharacterListController : UITableViewDataSource, UITableViewDelegate {
         self.searchBar.endEditing(true)
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if (indexPath.row == (characters.count - 1)) {
+            self.presenter?.getCharacters(search: self.searchBar.text ?? "")
+        }
+    }
+
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.searchBar.endEditing(true)
     }

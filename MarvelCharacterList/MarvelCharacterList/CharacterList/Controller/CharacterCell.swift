@@ -6,6 +6,7 @@
 //  Copyright © 2020 BABA  Rida. All rights reserved.
 
 import UIKit
+import Alamofire
 
 class CharacterCell : UITableViewCell {
     
@@ -25,6 +26,12 @@ class CharacterCell : UITableViewCell {
     }
     
     func loadProfileImage() {
-        // get picture of the character by the url image
+        Alamofire.request(character.imgUrl).responseData { (response) in
+            if response.error == nil {
+                if let data = response.data {
+                    self.profilePicture.image = UIImage(data: data)
+                }
+            }
+        }
     }
 }
