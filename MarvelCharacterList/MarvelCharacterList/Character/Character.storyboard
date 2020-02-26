@@ -14,13 +14,61 @@
                     <view key="view" contentMode="scaleToFill" id="ccI-wl-62e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hourglass" catalog="system" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jz6-b5-vKx">
+                                <rect key="frame" x="20" y="65" width="110" height="107.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="TJq-n2-HON"/>
+                                    <constraint firstAttribute="width" constant="110" id="wgK-xF-Shy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="55"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS2-ch-Ywm">
+                                <rect key="frame" x="168" y="108.5" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ZbS-7P-gSG"/>
+                                    <constraint firstAttribute="height" constant="21" id="ge3-LT-ELz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Description " lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-WK-DmV">
+                                <rect key="frame" x="20" y="182" width="172.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sS2-ch-Ywm" firstAttribute="centerY" secondItem="Jz6-b5-vKx" secondAttribute="centerY" id="2sv-00-bzL"/>
+                            <constraint firstItem="sS2-ch-Ywm" firstAttribute="leading" secondItem="Jz6-b5-vKx" secondAttribute="trailing" constant="38" id="6T1-Ni-brK"/>
+                            <constraint firstItem="Jz6-b5-vKx" firstAttribute="leading" secondItem="Z38-G3-izh" secondAttribute="leading" constant="20" id="BV7-Fb-s2N"/>
+                            <constraint firstItem="Xwl-WK-DmV" firstAttribute="top" secondItem="Jz6-b5-vKx" secondAttribute="bottom" constant="8" id="Gh4-qX-3HF"/>
+                            <constraint firstItem="Z38-G3-izh" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Xwl-WK-DmV" secondAttribute="bottom" id="bgp-rk-QOi"/>
+                            <constraint firstItem="Z38-G3-izh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xwl-WK-DmV" secondAttribute="trailing" constant="20" id="cdz-qe-HoI"/>
+                            <constraint firstItem="Jz6-b5-vKx" firstAttribute="top" secondItem="Z38-G3-izh" secondAttribute="top" constant="20" id="i4J-wk-4MG"/>
+                            <constraint firstItem="Xwl-WK-DmV" firstAttribute="leading" secondItem="Z38-G3-izh" secondAttribute="leading" constant="20" id="sWu-Ti-O28"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Z38-G3-izh"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Xwl-WK-DmV" id="6vh-5z-oYs"/>
+                        <outlet property="nameLabel" destination="sS2-ch-Ywm" id="jFF-oI-hWg"/>
+                        <outlet property="profilePicture" destination="Jz6-b5-vKx" id="xu5-8J-QJc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHz-yG-YYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="127"/>
+            <point key="canvasLocation" x="-115.94202898550725" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hourglass" catalog="system" width="54" height="64"/>
+    </resources>
 </document>

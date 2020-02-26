@@ -25,6 +25,8 @@ class CharacterCell : UITableViewCell {
         let storyboard = UIStoryboard(name: "Character", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Character") as! CharacterController
         // send character to the other viewcontroller
+        vc.character = character
+        vc.imageProfile = profilePicture.image!
         self.delegate?.present(vc, animated: true, completion: nil)
     }
     
