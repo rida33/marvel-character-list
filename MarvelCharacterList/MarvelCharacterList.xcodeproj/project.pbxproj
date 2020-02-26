@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2C3189D1877EA3969867C048 /* Pods_MarvelCharacterList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FFC64E0859279E5FC40F57 /* Pods_MarvelCharacterList.framework */; };
 		7A1F40D7C2ACAE3544ECE5E7 /* Pods_MarvelCharacterList_MarvelCharacterListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D612463ABCC1714C7A29A0 /* Pods_MarvelCharacterList_MarvelCharacterListUITests.framework */; };
+		C4514C1524069DDD004E377A /* Character.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4514C1424069DDC004E377A /* Character.storyboard */; };
+		C4514C1824069DFB004E377A /* CharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4514C1724069DFB004E377A /* CharacterController.swift */; };
 		C4F38E3424000750009CA128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F38E3324000750009CA128 /* AppDelegate.swift */; };
 		C4F38E3624000750009CA128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F38E3524000750009CA128 /* SceneDelegate.swift */; };
 		C4F38E3824000750009CA128 /* CharacterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F38E3724000750009CA128 /* CharacterListController.swift */; };
@@ -49,6 +51,8 @@
 		66D612463ABCC1714C7A29A0 /* Pods_MarvelCharacterList_MarvelCharacterListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelCharacterList_MarvelCharacterListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8249BCAEE09E1B58FFB653DA /* Pods-MarvelCharacterList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharacterList.release.xcconfig"; path = "Target Support Files/Pods-MarvelCharacterList/Pods-MarvelCharacterList.release.xcconfig"; sourceTree = "<group>"; };
 		B944E3E12AE7F5DE736BE141 /* Pods-MarvelCharacterList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharacterList.debug.xcconfig"; path = "Target Support Files/Pods-MarvelCharacterList/Pods-MarvelCharacterList.debug.xcconfig"; sourceTree = "<group>"; };
+		C4514C1424069DDC004E377A /* Character.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Character.storyboard; sourceTree = "<group>"; };
+		C4514C1724069DFB004E377A /* CharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterController.swift; sourceTree = "<group>"; };
 		C4F38E3024000750009CA128 /* MarvelCharacterList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelCharacterList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F38E3324000750009CA128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4F38E3524000750009CA128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,8 +111,24 @@
 				47CD7E3472D1CB051ABECA63 /* Pods-MarvelCharacterListTests.debug.xcconfig */,
 				5F966BFE064C193AF2451126 /* Pods-MarvelCharacterListTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C4514C1324069D45004E377A /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				C4514C1424069DDC004E377A /* Character.storyboard */,
+				C4514C1624069DE3004E377A /* Controller */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		C4514C1624069DE3004E377A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4514C1724069DFB004E377A /* CharacterController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C4F38E2724000750009CA128 = {
@@ -136,6 +156,7 @@
 		C4F38E3224000750009CA128 /* MarvelCharacterList */ = {
 			isa = PBXGroup;
 			children = (
+				C4514C1324069D45004E377A /* Character */,
 				C4F38E6A24001E8A009CA128 /* Models */,
 				C4F38E6324000B2C009CA128 /* CharacterList */,
 				C4F38E3324000750009CA128 /* AppDelegate.swift */,
@@ -319,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4514C1524069DDD004E377A /* Character.storyboard in Resources */,
 				C4F38E4024000752009CA128 /* LaunchScreen.storyboard in Resources */,
 				C4F38E3D24000752009CA128 /* Assets.xcassets in Resources */,
 				C4F38E3B24000750009CA128 /* CharacterList.storyboard in Resources */,
@@ -452,6 +474,7 @@
 				C4F38E3824000750009CA128 /* CharacterListController.swift in Sources */,
 				C4F38E3424000750009CA128 /* AppDelegate.swift in Sources */,
 				C4F38E6924000BC0009CA128 /* CharacterListPresenter.swift in Sources */,
+				C4514C1824069DFB004E377A /* CharacterController.swift in Sources */,
 				C4F38E6C24001EC5009CA128 /* Character.swift in Sources */,
 				C4F38E3624000750009CA128 /* SceneDelegate.swift in Sources */,
 				C4F38E6724000B81009CA128 /* CharacterCell.swift in Sources */,

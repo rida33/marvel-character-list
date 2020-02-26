@@ -22,7 +22,10 @@ class CharacterCell : UITableViewCell {
     }
     
     @IBAction func buttonTouched(_ sender: Any) {
-        // OPEN Character info page
+        let storyboard = UIStoryboard(name: "Character", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Character") as! CharacterController
+        // send character to the other viewcontroller
+        self.delegate?.present(vc, animated: true, completion: nil)
     }
     
     func loadProfileImage() {
